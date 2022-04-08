@@ -77,10 +77,10 @@ load('HRE_AR_database_20211130.mat')  %  load propellant thermal properties from
    chamber.density=material.SAE4130.density;
    nozzle.div.strength=material.AL7075T6.yieldStrength;
    nozzle.div.density=material.AL7075T6.density;
-   nozzle.div_adbatic.density=material.silicaphenolic.density;
+   nozzle.div_insulation.density=material.silicaphenolic.density;
    nozzle.con.strength=material.SAE4130.yieldStrength;
    nozzle.con.density=material.SAE4130.density;
-   nozzle.con.density=material.silicaphenolic.density;
+   nozzle.con_insulation.density=material.silicaphenolic.density;
 %%%
 
 F_avg=[300]; %kgf
@@ -195,10 +195,6 @@ function [c,ceq]=simple_constraint(x)
   end
  
 
-t
- 
- 
- 
 
 
 
