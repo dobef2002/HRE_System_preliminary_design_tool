@@ -23,9 +23,13 @@ function [grain,Rf]=fuel_grain_cal(nozzle, time_burn,Mass,Rf,J,of_cea)
                     Rf=grain.Dport.final/grain.Dport.initial;
                     grain.length=4*Mass.propellant.fuel/(density_f*pi*(grain.Dport.final^2-grain.Dport.initial^2));
   
-                    grain.Dport.final=grain.Dport.initial*Rf;
+                    
+             else
+                   grain.Dport.final=grain.Dport.initial*Rf;
+                   grain.length=4*Mass.propellant.fuel/(density_f*pi*(grain.Dport.final^2-grain.Dport.initial^2));
+                   
 
-                    grain.length=4*Mass.propellant.fuel/(density_f*pi*(grain.Dport.final^2-grain.Dport.initial^2));
+            end       
 
 
 end
